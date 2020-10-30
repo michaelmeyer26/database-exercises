@@ -3,7 +3,8 @@ USE employees;
 -- no 1
 SELECT first_name, last_name
 FROM employees
-WHERE first_name IN ('Irena', 'Vidya', 'Maya');
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name, first_name DESC;
 
 --no 2
 SELECT first_name, last_name
@@ -40,12 +41,14 @@ WHERE last_name LIKE 'E%' OR last_name LIKE '%e';
 --no 4
 SELECT first_name, last_name
 FROM employees
-WHERE last_name LIKE 'E%e';
+WHERE last_name LIKE 'E%e'
+ORDER BY emp_no DESC;
 
 --no 5
-SELECT first_name, last_name
+SELECT first_name, last_name, birth_date, hire_date
 FROM employees
-WHERE birth_date LIKE '%12-25' AND hire_date LIKE '199%';
+WHERE birth_date LIKE '%12-25' AND hire_date LIKE '199%'
+ORDER BY birth_date, hire_date DESC;
 
 --no 6
 SELECT first_name, last_name
